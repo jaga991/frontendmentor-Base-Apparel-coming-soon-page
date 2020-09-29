@@ -1,0 +1,146 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    /* color-primary */
+    --color-primary-desaturated-red: hsl(0, 36%, 70%);
+    --color-primary-soft-red: hsl(0, 93%, 68%);
+    
+    /* color-neutral */
+    --color-neutral-dark-grayish-red: hsl(0, 6%, 24%);
+    
+    /* primary-font */
+    --primary-font: font-family: 'Josefin Sans', sans-serif;
+}
+
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-left: 170px;
+  padding-right: 200px;
+}
+
+.center-center {
+  align-items: center;
+  justify-content: center;
+}
+
+body .desktop-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 75vw, auto;
+}
+
+
+header {
+  margin-bottom: 140px;
+}
+/* font size
+    word spacing 
+    font color
+    form group size
+    form control size and button design*/
+
+body h1 {
+  font-size: 60px;
+  font-weight: 400;
+  font-family: var(--primary-font);
+  line-height: 6rem;
+  letter-spacing: 1.8rem;
+}
+
+body h1:first-child {
+  color: var(--color-primary-desaturated-red);
+  font-weight: 200;
+}
+
+
+body p {
+  margin-top: 3rem;
+  margin-bottom: 10px;
+  line-height: 2.5rem;
+  font-size: 16px;
+  font-family: var(--primary-font);
+  color: var(--color-primary-desaturated-red);
+  font-weight: 400;
+  word-spacing: 0.7rem;
+}
+
+body #hero-img {
+  display: block;
+  height: 100%;
+  width: 40vw;
+}
+
+.form-group {
+  /* border: 5px solid black; */
+  position: relative;
+  height: 50px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 130px;
+  -moz-border-radius: 130px;
+  border-radius: 130px;
+  border: 3px solid hsl(0, 36%, 88%);
+  padding-left: 25px;
+  font-size: 20px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border: 3px solid hsl(0, 36%, 60%);
+}
+
+.form-group input::placeholder {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-primary-desaturated-red);
+}
+
+.form-group button {
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  left: 90%;
+  -webkit-border-radius: 130px;
+  -moz-border-radius: 130px;
+  border-radius: 130px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  outline: none;
+}
+
+.form-group button:hover {
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 80%, 50%), hsl(0, 74%, 74%));
+}
+
+
+@media only screen and (max-width: 1025px) {
+  .mobile-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  #hero-img {
+    width: 100%;
+    position: absolute;
+  }
+}
